@@ -99,7 +99,7 @@ public class BullishCartServiceImpl implements BullishCartService {
                     }
                 }).sum();
 
-        cart.setTotalAmmount(total);
+        cart.setTotalAmount(total);
     }
 
 }

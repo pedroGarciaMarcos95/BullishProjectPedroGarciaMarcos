@@ -43,7 +43,7 @@ class BullishCartServiceImplTest {
     @BeforeEach
     void setUp() {
         createProduct();
-        createDisscount();
+        createDiscount();
         assingDiscountToProduct(discount, product1);
         productDataList = new ArrayList<>();
         productDataList.add(product1);
@@ -84,15 +84,15 @@ class BullishCartServiceImplTest {
         when(bullishDiscountService.applyDiscount(cart, product1)).thenReturn(50d);
         bullishCartService.addProductToCart(cart, product1);
         assertThat(cart.getProductDataList().size(), is(3));
-        assertNotNull(cart.getTotalAmmount());
-        assertThat(cart.getTotalAmmount(), is(170d));
+        assertNotNull(cart.getTotalAmount());
+        assertThat(cart.getTotalAmount(), is(170d));
     }
 
     @Test
     void testRemoveProductFromCartById() {
         bullishCartService.removeProductFromCartById(cart, product1.getId());
         assertThat(cart.getProductDataList().size(), is(1));
-        assertThat(cart.getTotalAmmount(), is(20d));
+        assertThat(cart.getTotalAmount(), is(20d));
     }
 
     @Test
@@ -101,8 +101,8 @@ class BullishCartServiceImplTest {
         cart.setProductDataList(null);
         bullishCartService.addProductToCart(cart, product1);
         assertThat(cart.getProductDataList().size(), is(1));
-        assertNotNull(cart.getTotalAmmount());
-        assertThat(cart.getTotalAmmount(), is(100d));
+        assertNotNull(cart.getTotalAmount());
+        assertThat(cart.getTotalAmount(), is(100d));
         verify(bullishDiscountService, never()).applyDiscount(any(), any());
         verify(bullishDiscountService, times(1)).isDiscountApplicable(cart, product1, 1);
     }
@@ -119,7 +119,7 @@ class BullishCartServiceImplTest {
         product2.setName("Product 2");
     }
 
-    private void createDisscount() {
+    private void createDiscount() {
         discount = new DiscountData();
         discount.setId(1L);
         discount.setPercentage(false);

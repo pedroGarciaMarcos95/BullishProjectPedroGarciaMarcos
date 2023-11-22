@@ -61,7 +61,7 @@ class BullishOrderControllerTest {
         resultActionsOrder
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(jsonPath("$.id").exists())
-                .andExpect(jsonPath("$.totalAmmount").value(product1.getPrice()))
+                .andExpect(jsonPath("$.totalAmount").value(product1.getPrice()))
                 .andExpect(jsonPath("$.productDataList[0].id").value(product1.getId()))
                 .andExpect(jsonPath("$.productDataList[0].name").value(product1.getName()))
                 .andExpect(jsonPath("$.productDataList[0].price").value(product1.getPrice()))

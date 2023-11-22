@@ -7,7 +7,7 @@ import java.util.List;
 public class CartData {
 
     private String id;
-    private Double totalAmmount;
+    private Double totalAmount;
     private List<ProductData> productDataList;
 
     public CartData() {
@@ -25,12 +25,12 @@ public class CartData {
         this.id = id;
     }
 
-    public Double getTotalAmmount() {
-        return totalAmmount;
+    public Double getTotalAmount() {
+        return totalAmount;
     }
 
-    public void setTotalAmmount(Double totalAmmount) {
-        this.totalAmmount = totalAmmount;
+    public void setTotalAmount(Double totalAmount) {
+        this.totalAmount = totalAmount;
     }
 
     public List<ProductData> getProductDataList() {

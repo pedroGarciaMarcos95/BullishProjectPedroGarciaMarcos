@@ -255,7 +255,7 @@
 			"name": "Discount",
 			"item": [
 				{
-					"name": "Create Disscount",
+					"name": "Create Discount",
 					"request": {
 						"auth": {
 							"type": "basic",

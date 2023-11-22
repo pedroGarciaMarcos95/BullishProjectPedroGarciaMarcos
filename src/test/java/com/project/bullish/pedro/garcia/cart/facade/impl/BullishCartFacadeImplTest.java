@@ -43,7 +43,7 @@ class BullishCartFacadeImplTest {
     @BeforeEach
     void setUp() {
         createProduct();
-        createDisscount();
+        createDiscount();
         assingDiscountToProdduct(discount, product1);
         productDataList = new ArrayList<>();
         productDataList.add(product1);
@@ -103,7 +103,7 @@ class BullishCartFacadeImplTest {
         product2.setName("Product 2");
     }
 
-    private void createDisscount() {
+    private void createDiscount() {
         discount = new DiscountData();
         discount.setId(1L);
         discount.setPercentage(false);

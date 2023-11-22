@@ -16,7 +16,7 @@ public class OrderData {
 
     public OrderData(CartData cartData) {
         this.id = cartData.getId();
-        this.totalAmount = cartData.getTotalAmmount();
+        this.totalAmount = cartData.getTotalAmount();
         this.productDataList = cartData.getProductDataList();
     }
 
