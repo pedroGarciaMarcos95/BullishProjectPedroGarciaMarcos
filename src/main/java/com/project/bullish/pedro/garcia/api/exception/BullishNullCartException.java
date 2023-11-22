@@ -2,7 +2,6 @@ package com.project.bullish.pedro.garcia.api.exception;
 
 public class BullishNullCartException extends Exception {
 
-
     private final String interactionReason;
     private final String key;
 

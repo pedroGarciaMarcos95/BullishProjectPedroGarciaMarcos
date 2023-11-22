@@ -18,8 +18,6 @@ public class AuthorizeUrlsSecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-
-        //Basic custom filter
         http
                 .authorizeHttpRequests((authorizeHttpRequests) ->
                         authorizeHttpRequests
