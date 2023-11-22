@@ -39,7 +39,7 @@
 ## POSTMAN TEST
 
 * You have the possibility to test the application through POSTMAN.
-* POSTMAN collection path: resources/postmanCollection/Bullish Project.postman_collection.json .
+* POSTMAN collection path: resources/postmanCollection/Bullish Project.postman_collection.json . [ POSTMAN COLLECTION](https://github.com/pedroGarciaMarcos95/BullishProjectPedroGarciaMarcos/blob/main/src/main/resources/postmanCollection/Bullish%20Project.postman_collection.json)
 * The collection.json is ready to be imported and tested.
 * Main endpoints functionality :
   * Product:
@@ -63,3 +63,7 @@
 * As the requirements were not very concrete, I think I have done more than necessary.
 * I have left comments around the project explaining some things and why I have done them this way.
 * I have prioritized to show you my programming skills over the simplicity of the code.
+
+## Bullish Technical Assessment
+
+* [Technical Assessment](https://github.com/pedroGarciaMarcos95/BullishProjectPedroGarciaMarcos/blob/e9322b733053403449b97a5053b56e9823a6be54/src/main/resources/Bullish%20Technical%20Assessment%20(Take%20home).pdf)
