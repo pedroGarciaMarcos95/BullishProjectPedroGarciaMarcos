@@ -49,7 +49,7 @@ public class BullishDiscountServiceImpl implements BullishDiscountService {
         DiscountData discount = product.getDiscount();
 
         //This check is useless right now because we are checking that in the previous method.
-        //I´´l let it like that just in case this method is beeing called in the future.
+        //I won´t remove the null check as this method can be used in the future.
         if (Objects.nonNull(discount)) {
             double discountValue = discount.isPercentage()
                     ? calculatePercentageDiscount(originalPrice, discount.getValue())

@@ -59,6 +59,7 @@ public class BullishCartServiceImpl implements BullishCartService {
 
     @Override
     public void removeProductFromCartIfNeeded(ProductData productData) {
+        //This method removes all products on all carts. I could create method just to remove a product for 1 cart.
         carts.values()
                 .forEach(cart -> {
                     cart.getProductDataList().removeIf(product -> product.equals(productData));
@@ -72,6 +73,8 @@ public class BullishCartServiceImpl implements BullishCartService {
     }
 
     private void calculateTotals(CartData cart) {
+        //First approach of a calculateTotals method with the calculations of the promotions.
+        //This map was created with AtomicInteger because I had to get the number of same product con each cart.
         Map<String, AtomicInteger> productCountMap = new HashMap<>();
 
         double total = cart.getProductDataList().stream()
@@ -79,6 +82,8 @@ public class BullishCartServiceImpl implements BullishCartService {
                     double productPrice = product.getPrice();
                     String productId = product.getId().toString();
 
+                    //I used computeIfAbsent method that memorize the Product id of each product.
+                    //With this I was able to create a custom map for each product by ID.
                     AtomicInteger productCount = productCountMap.computeIfAbsent(productId, k -> new AtomicInteger(1));
 
                     if (Objects.nonNull(product.getDiscount())) {

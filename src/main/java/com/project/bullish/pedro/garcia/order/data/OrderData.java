@@ -8,7 +8,7 @@ import java.util.List;
 public class OrderData {
 
     private String id;
-    private Double totalAmmount;
+    private Double totalAmount;
     private List<ProductData> productDataList;
 
     public OrderData() {
@@ -16,7 +16,7 @@ public class OrderData {
 
     public OrderData(CartData cartData) {
         this.id = cartData.getId();
-        this.totalAmmount = cartData.getTotalAmmount();
+        this.totalAmount = cartData.getTotalAmmount();
         this.productDataList = cartData.getProductDataList();
     }
 
@@ -28,12 +28,12 @@ public class OrderData {
         this.id = id;
     }
 
-    public Double getTotalAmmount() {
-        return totalAmmount;
+    public Double getTotalAmount() {
+        return totalAmount;
     }
 
-    public void setTotalAmmount(Double totalAmmount) {
-        this.totalAmmount = totalAmmount;
+    public void setTotalAmount(Double totalAmount) {
+        this.totalAmount = totalAmount;
     }
 
     public List<ProductData> getProductDataList() {

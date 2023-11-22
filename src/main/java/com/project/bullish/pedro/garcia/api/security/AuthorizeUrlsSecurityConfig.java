@@ -19,6 +19,7 @@ public class AuthorizeUrlsSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
+        //Basic custom filter
         http
                 .authorizeHttpRequests((authorizeHttpRequests) ->
                         authorizeHttpRequests
@@ -33,6 +34,8 @@ public class AuthorizeUrlsSecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
+
+        // I created 2 users here to be able to test it through POSTMAN
         UserDetails user = User.withDefaultPasswordEncoder()
                 .username("user")
                 .password("password")

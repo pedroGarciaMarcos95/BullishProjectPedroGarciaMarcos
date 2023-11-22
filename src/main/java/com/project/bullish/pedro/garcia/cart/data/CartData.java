@@ -13,7 +13,6 @@ public class CartData {
     public CartData() {
     }
 
-
     public CartData(List<ProductData> productDataList) {
         this.productDataList = productDataList;
     }

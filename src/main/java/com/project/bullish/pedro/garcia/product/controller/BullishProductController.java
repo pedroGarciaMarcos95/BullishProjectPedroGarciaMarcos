@@ -33,8 +33,8 @@ public class BullishProductController {
         ProductData productData = bullishProductFacade.getProductById(productId);
 
         if (productData == null || productId == null) {
-            //I added a key here as it should be a web application and the FE part needs to be headless,
-            //it´s always useful to have a key of the error in case they want to show some message.
+            //I added a key here. Right now the key is not being used, but if an error occurs in a BE request,
+            // the FE has to know what kind of error it is, and for that purpose this key could be used.
             throw new BullishProductNotFoundException(ERROR_PRODUCT_NOT_FOUND_CODE, productId);
         }
 
